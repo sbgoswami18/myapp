@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import utube_icon from "../../assets/utube_icon.png";
+import spotify_icon from "../../assets/spotify_icon.png";
+import rss_icon from "../../assets/rss_icon.png";
 import UploadPopup from "./UploadPopup";
 import Sidebar from "./Sidebar";
 import "./Project.css"; // Assuming you have a CSS file for this component
@@ -78,11 +80,11 @@ const Project = () => {
             <p>Upload Youtube Video</p>
           </div>
           <div className="upload-option" onClick={togglePopup}>
-            <img src={utube_icon} alt="Spotify" />
+            <img src={spotify_icon} alt="Spotify" />
             <p>Upload Spotify Podcast</p>
           </div>
           <div className="upload-option" onClick={togglePopup}>
-            <img src={utube_icon} alt="RSS Feed" />
+            <img src={rss_icon} alt="RSS Feed" />
             <p>Upload from RSS Feed</p>
           </div>
           <div className="upload-option" onClick={togglePopup}>
@@ -90,11 +92,11 @@ const Project = () => {
             <p>Upload Youtube Video</p>
           </div>
           <div className="upload-option" onClick={togglePopup}>
-            <img src={utube_icon} alt="Spotify" />
+            <img src={spotify_icon} alt="Spotify" />
             <p>Upload Spotify Podcast</p>
           </div>
           <div className="upload-option" onClick={togglePopup}>
-            <img src={utube_icon} alt="RSS Feed" />
+            <img src={rss_icon} alt="RSS Feed" />
             <p>Upload from RSS Feed</p>
           </div>
         </div>
