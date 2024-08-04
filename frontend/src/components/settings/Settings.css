@@ -1,0 +1,115 @@
+.profile-subscription {
+    /* font-family: Arial, sans-serif; */
+    /* padding: 20px; */
+    /* max-width: 500px; */
+    /* margin: auto; */
+    /* border: 1px solid #ddd; */
+    /* border-radius: 10px; */
+    /* background-color: #fff; */
+  }
+  
+  .profile-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .profile-image {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin-right: 50px;
+  }
+  .profile-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+  
+  .profile-field {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .profile-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .profile-field input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f9f9f9;
+  }
+  
+  .subscription-section {
+    margin-top: 20px;
+  }
+  
+  .subscription-section h2 {
+    color: #7E22CE;
+    margin-bottom: 15px;
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 35px;
+  }
+  
+  .subscription-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #7E22CE 100%, #460281 100%);
+  }
+  .subscription-plan span {
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  
+  .subscription-plan strong {
+    font-weight: bold;
+  }
+  .upgrade-button {
+    background-color: #fff;
+    color: #7E22CE;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 25px;
+    margin-right: 20px;
+  }
+  .cancel-button {
+    display: block;
+    margin-top: 15px;
+    color: #FF274C;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 22px;
+  }
+  .textUnderLine {
+    padding-left: 0 !important;
+    text-decoration: underline;
+  }
+ 
+  .save-button {
+    padding: 10px 20px;
+    background: #7e22ce;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 175px;
+  }

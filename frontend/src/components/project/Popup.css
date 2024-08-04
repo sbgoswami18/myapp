@@ -1,0 +1,98 @@
+.popUpRegistration .popup-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 900px;
+	background-color: white;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+
+.fileUploadPopup .popUpRegistration .popup-container {
+	left: 60%;
+}
+
+.popUpRegistration .popup-header {
+  background:none ;
+  padding: 20px;
+  /* border-bottom: 1px solid #eaeaea; */
+  border: none;
+}
+
+
+.popUpRegistration button:nth-child(1) {
+	color: red;
+	background: none !important;
+}
+.popUpRegistration button:nth-child(2) {
+	color: #fff;
+}
+.popUpRegistration .popup-header h2 {
+	margin: 0;
+	font-size: 30px;
+	color: #7e22ce;
+	font-weight: bold;
+}
+.popup-body {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Updated border radius */
+  font-size: 16px;
+  outline: none;
+}
+
+.input-error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  /* border-top: 1px solid #eaeaea; */
+}
+
+.popUpRegistration .popup-footer button {
+  background-color: #7E22CE; /* Updated background */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Updated border radius */
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.popup-footer button[type="button"] {
+  background-color: #ccc;
+}
+
+.popup-footer button:hover {
+  background-color: #5434d9; /* Updated hover */
+}

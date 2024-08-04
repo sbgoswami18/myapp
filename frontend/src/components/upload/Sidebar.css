@@ -1,0 +1,88 @@
+.sidebar {
+    background-color: #f3ebf7; /* Light purple background */
+    width: 300px; /* Adjust the width as needed */
+    padding: 20px;
+    box-sizing: border-box;
+    /* height: 100vh; */
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.logo p {
+    font-size: 45px;
+    font-weight: bold;
+    color: #7E22CE;
+}
+
+.sideBarListingText {
+    font-size: 16px;
+    color: #333;
+}
+
+.sideBarListing {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sideBarListing li {
+	padding: 10px;
+	margin: 15px 0;
+	border-radius: 132px;
+	color: #666;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+}
+.sideBarListing li.active {
+    background-color: #7E22CE; /* Purple background for active item */
+    color: white;
+    font-weight: bold;
+}
+
+.number {
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.sideBarListing li.active .number {
+    background-color: black; /* Background color for active number */
+    color: white; /* Text color for active number */
+}
+.sideBarListingText p {
+	margin-bottom: 20px;
+}
+
+.setting_icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 9px;
+}
+
+.settingBar {
+	position: absolute;
+	bottom: 0;
+	width: 85%;
+	border-top: 2px solid#CAC4D0;
+}
+.sideBarListing {
+    padding-bottom: 10px;
+    border-bottom: 2px solid#CAC4D0;
+  }

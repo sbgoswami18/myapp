@@ -1,0 +1,96 @@
+.project-container {
+    display: flex;
+  }
+  
+  .content {
+    flex: 1;
+    transition: filter 0.3s;
+  }
+
+  .navigationStrip {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navigationStripLeft img {
+    width: 45px;
+    height: 45px;
+    float: left;
+  }
+  .notificationIcon img {
+    width: 45px;
+    height: 45px;
+  }
+  .navigationStripLeft p {
+    float: left;
+    color: #999999;
+    font-size: 28px;
+    font-weight: 500;
+    padding-top: 4px;
+    cursor: pointer;
+  }
+  .navigationStripLeft p span {
+    color: #7E22CE;
+    padding-left: 10px;
+  }
+  .navigationStripRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navigationStripRight p {
+    font-size: 28px;
+    font-weight: 700;
+    margin-right: 19px;
+  }
+
+  
+  .ukLogoDiv img{
+    width: 45px;
+    height: 45px;
+  }
+  .ukLogoDiv {
+    margin-right: 30px;
+  }
+  .blur {
+    filter: blur(5px);
+  }
+  
+  
+  .upload-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .upload-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .upload-option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .upload-option img {
+    width: 84px;
+height: 84px;
+  }
+  
+  .upload-option p {
+    margin-top: 10px;
+    padding-left: 33px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    color: #3C3C3C;
+  }
+
+  .homeIcon{
+    cursor: pointer;
+  }

@@ -1,0 +1,82 @@
+.list-data {border: 1px solid #999999;
+border-radius: 22px;
+margin-bottom: 30px;}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border-bottom: 1px solid #DBDBDB;
+    padding: 10px 0 10px 68px;
+    font-size: 26px;
+  }
+
+
+  th {
+    text-align: left;
+    padding: 20px 0 20px 68px;
+  }
+  
+
+  .projectTask-listing  .upload-option{width: 275px;} 
+.projectTask-listing  .upload-option img{width: 60px;height: 60px;}
+.projectTask-listing  .upload-option p {
+	font-size: 19px;
+	}
+  .projectTask-listing .upload-options {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 56px;
+  }
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    background: #7E22CE;
+    padding: 18px 47px;
+    margin: 41px 0;
+    border-radius: 16px;
+    align-items: center;
+  }
+  .banner p {
+    font-size: 26px;
+    color: #fff;
+    font-weight: bold;
+  }
+  .banner button {
+    background: #fff;
+    font-size: 21px;
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 9px;
+  }
+    table tbody tr td:nth-child(4) button {
+      font-size: 17px;
+      font-weight: 500;
+      color: #3C3C3C;
+      padding: 10px 25px;
+    }
+    table tbody tr td:nth-child(4) button:nth-child(2) {
+      color: #FF274C;
+    }
+    .tableActionBtn {
+      border: 1px solid #D9D9D9;
+      border-radius: 6px;
+  width: fit-content;  }
+
+
+  table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  table tbody tr td:nth-child(4) button {
+    padding: 10px 25px;
+      font-size: 17px;
+      font-weight: 500;
+      color:#3C3C3C;
+      border-right: 1px solid #D9D9D9;
+  }
+  table tbody tr td:nth-child(4) button:nth-child(2) {
+      border-right: none;
+  }
+  table tbody tr td:nth-child(4) button:nth-child(2){color: #FF274C;}
