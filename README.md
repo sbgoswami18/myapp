@@ -1,0 +1,8 @@
+# MyApp
+
+# Name:- Shivam Goswami
+# Email:- sbgoswami18@gmail.com
+
+**Skills:-** MongoDB, Express.js, React.js, Node.js, Css, Cloudinary, Mongodb atlas, Postman
+
+**Note:-** The Tailwind CSS package was installed in this project but was not utilized as per the provided instructions.
