@@ -9,7 +9,7 @@ export const ListProvider = ({ children }) => {
   const [listData, setListData] = useState([]);
   const [token, setToken] = useState(localStorage.getItem("token") || "")
 
-  const url = "http://localhost:4000";
+  const url = "https://myappbackend-9pmb.onrender.com";
 
   const fetchAllProjectsHandler = async () => {
     try {
