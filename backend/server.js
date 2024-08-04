@@ -25,7 +25,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
 
-const port = 4000
+const PORT = process.env.PORT || 4000;
 
 // middleware
 app.use(express.json())
@@ -55,6 +55,6 @@ app.get('/', (req, res) => {
     res.send('API Working...')
 })
 // Start the server
-app.listen(port, () => {
-    console.log(`Server started on http://localhost:${port}`)
+app.listen(PORT, () => {
+    console.log(`Server started on http://localhost:${PORT}`)
 })
