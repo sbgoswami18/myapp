@@ -52,7 +52,7 @@ app.use("/api/widgetGeneral", widgetGeneralRouter)
 app.use("/api/widgetDisplay", widgetDisplayRouter)
 
 app.get('/', (req, res) => {
-    res.send('API Working...')
+    res.send('Server is working successfully...')
 })
 // Start the server
 app.listen(PORT, () => {
