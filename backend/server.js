@@ -25,7 +25,15 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
 
-app.use(cors());
+// CORS options
+const corsOptions = {
+    origin: 'https://myapp-wine-six.vercel.app', // Replace with your frontend's URL
+    methods: ['GET', 'POST'], // Allowed methods
+    allowedHeaders: ['Content-Type'], // Allowed headers
+};
+
+// Use CORS middleware with options
+app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 4000;
 
