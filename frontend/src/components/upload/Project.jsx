@@ -12,7 +12,7 @@ import { ListContext } from "../../context/ListContext";
 import { useNavigate, useParams } from "react-router-dom";
 
 const Project = () => {
-  const { url, token, currentProjectId } = useContext(ListContext);
+  const { url, token, currentProjectId, fetchAllProjectContentData } = useContext(ListContext);
   const navigate = useNavigate();
 
   const { id } = useParams();
@@ -99,7 +99,7 @@ const Project = () => {
           </div>
         </div>
       </div>
-      <div className="fileUploadPopup">{isPopupVisible && <UploadPopup onClose={togglePopup} />}</div>
+      <div className="fileUploadPopup">{isPopupVisible && <UploadPopup onClose={togglePopup} fetchAllProjectContentData={fetchAllProjectContentData}/>}</div>
     </div>
   );
 };

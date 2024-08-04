@@ -17,7 +17,7 @@ const UploadPopup = ({ onClose, fetchAllProjectContentData }) => {
     const response = await axios.post(`${url}/api/projectContent/createProjectContent`, {name: projectName, description: projectDes, projectId: currentProjectId}, { headers: { token } })
     if(response.data.success) {
       console.log('projectContent created successful:', response.data);
-      fetchAllProjectContentData();
+      await fetchAllProjectContentData();
     }
     else {
       console.error('projectContent creation failed:', response.data.message);

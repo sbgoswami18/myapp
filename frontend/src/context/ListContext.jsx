@@ -7,9 +7,10 @@ export const ListProvider = ({ children }) => {
   const [currentProjectId, setCurrentProjectId] = useState("");
   const [currentProjectContentId, setCurrentProjectContentId] = useState("");
   const [listData, setListData] = useState([]);
+  const [allProjectContentData, setAllProjectContentData] = useState();
   const [token, setToken] = useState(localStorage.getItem("token") || "")
 
-  const url = "https://myappbackend-9pmb.onrender.com";
+  const url = process.env.REACT_APP_BASE_URL;
 
   const fetchAllProjectsHandler = async () => {
     try {
@@ -24,6 +25,21 @@ export const ListProvider = ({ children }) => {
       }
     } catch (error) {
       console.error("Error fetching projects:", error);
+    }
+  };
+  const fetchAllProjectContentData = async () => {
+    console.log("Call fetchAllProjectContentData...");
+    console.log("currentProjectId ", currentProjectId);
+    const response = await axios.get(
+      `${url}/api/projectContent/getAllProjectContent/${currentProjectId}`,
+      { headers: { token } }
+    );
+
+    if (response.data.success) {
+      console.log("AllProjectContent fetch successful:", response.data.allProjectContent);
+      setAllProjectContentData(response.data.allProjectContent);
+    } else {
+      console.error("AllProjectContent fetch failed:", response.data.message);
     }
   };
 
@@ -46,6 +62,9 @@ export const ListProvider = ({ children }) => {
     setCurrentProjectId,
     currentProjectContentId,
     setCurrentProjectContentId,
+    allProjectContentData,
+    setAllProjectContentData,
+    fetchAllProjectContentData
   };
 
   return (

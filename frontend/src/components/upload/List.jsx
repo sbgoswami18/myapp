@@ -12,13 +12,13 @@ import axios from 'axios';
 import UploadPopup from './UploadPopup';
 
 const List = () => {
-  const { currentProjectId, token, url, setCurrentProjectContentId, setCurrentProjectId, currentProjectContentId } = useContext(ListContext);
+  const { currentProjectId, token, url, setCurrentProjectContentId, setCurrentProjectId, fetchAllProjectContentData, allProjectContentData } = useContext(ListContext);
   const navigate = useNavigate();
 
   const { id } = useParams();
 
   const [isPopupVisible, setIsPopupVisible] = useState(false);
-  const [allProjectContentData, setAllProjectContentData] = useState();
+
 
   const [projectData, setProjectData] = useState({});
 
@@ -56,21 +56,7 @@ const List = () => {
     // navigate('/editList', { state: { item } });
   };
 
-  const fetchAllProjectContentData = async () => {
-    console.log("Call fetchAllProjectContentData...");
-    console.log("currentProjectId ", currentProjectId);
-    const response = await axios.get(
-      `${url}/api/projectContent/getAllProjectContent/${currentProjectId}`,
-      { headers: { token } }
-    );
 
-    if (response.data.success) {
-      console.log("AllProjectContent fetch successful:", response.data.allProjectContent);
-      setAllProjectContentData(response.data.allProjectContent);
-    } else {
-      console.error("AllProjectContent fetch failed:", response.data.message);
-    }
-  };
 
   const handleDelete = async (item) => {
     const response = await axios.delete(

@@ -32,7 +32,7 @@ const Widget = () => {
     positionOnScreen: 'Bottom Right',
     distanceFromBottom: '',
     horizontalDistance: '',
-    botIcon: null
+    // botIcon: null
   });
 
   const [isGeneralComplete, setIsGeneralComplete] = useState(false);
@@ -138,7 +138,7 @@ const Widget = () => {
 
       if (response.data.success) {
         console.log("Display form submitted successfully:", response.data);
-        navigate(`/settings`);
+        navigate(`/settings/${id}`);
       } else {
         console.error("Display form submission failed:", response.data.message);
       }
@@ -323,7 +323,7 @@ const Widget = () => {
                     placeholder="20" 
                   />
                 </div>
-                <div className="form-group">
+                {/* <div className="form-group">
                   <label>Bot Icon</label>
                   <div className='iconUploadBox'>
                     <div className='circleIconHolder'></div>
@@ -337,7 +337,7 @@ const Widget = () => {
                       <div className="recommendation">Recommended Size: 48x48px</div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className="widgetSubmit"><button type="submit">Submit</button></div>
             </form>

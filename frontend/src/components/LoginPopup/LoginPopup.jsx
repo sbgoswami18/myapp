@@ -3,7 +3,7 @@ import './LoginPopup.css';
 import cross_icon from "../../assets/cross_icon.png";
 import axios from "axios";
 import { ListContext } from '../../context/ListContext';
-import { signUp } from '../../services/operations/authAPI';
+import { login, signUp } from '../../services/operations/authAPI';
 import { useNavigate } from 'react-router-dom';
 
 const LoginPopup = ({ setShowLogin }) => {
@@ -27,36 +27,46 @@ const LoginPopup = ({ setShowLogin }) => {
 
     const onLogin = async (event) => {
         event.preventDefault();
-        try {
-            const response = await axios.post(`${url}/api/user/login`, {
-                email: data.email,
-                password: data.password
-            });
+        await login(
+            data.email,
+            data.password,
+            setShowLogin,
+            setToken,
+        )()
+        setShowLogin(false)
 
-            if (response.data.success) {
-                console.log('Login successful:', response.data);
-                setToken(response.data.token)
-                localStorage.setItem("token", response.data.token)
-                setShowLogin(false);
-            } else {
-                console.error('Login failed:', response.data.message);
-                alert(response.data.message);
-            }
-        } catch (error) {
-            console.error('An error occurred during login:', error);
-            alert('An error occurred during login. Please try again.');
-        }
+        // try {
+        //     const response = await axios.post(`${url}/api/user/login`, {
+        //         email: data.email,
+        //         password: data.password
+        //     });
+
+        //     if (response.data.success) {
+        //         console.log('Login successful:', response.data);
+        //         setToken(response.data.token)
+        //         localStorage.setItem("token", response.data.token)
+        //         setShowLogin(false);
+        //     } else {
+        //         console.error('Login failed:', response.data.message);
+        //         alert(response.data.message);
+        //     }
+        // } catch (error) {
+        //     console.error('An error occurred during login:', error);
+        //     alert('An error occurred during login. Please try again.');
+        // }
     };
 
     const onSignup = async (event) => {
         event.preventDefault();
-        await signUp(data.name,
+        await signUp(
+            data.name,
             data.email,
             data.password,
             navigate,
             setShowLogin,
             setToken,
         )()
+        setShowLogin(false)
         // try {
         //     const response = await axios.post(`${url}/api/user/register`, {
         //         name: data.name,

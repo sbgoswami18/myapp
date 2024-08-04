@@ -1,5 +1,5 @@
 {
-  "name": "react-tailwind-css-starter-pack",
+  "name": "react-starter-pack",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,11 +15,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git"
+    "url": ""
   },
-  "author": "Pranay Gupta",
+  "author": "Shivam Goswami",
   "bugs": {
-    "url": "https://github.com/thepranaygupta/react-tailwind-css-starter-pack/issues"
+    "url": ""
   },
   "scripts": {
     "start": "react-scripts start",
