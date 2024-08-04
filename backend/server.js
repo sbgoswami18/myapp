@@ -20,19 +20,17 @@ const app = express()
 // Use CORS middleware with options
 app.use(cors());
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+// // Serve static files from the React app
+// app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+// });
 
 const PORT = process.env.PORT || 4000;
 
 // middleware
 app.use(express.json())
-app.use(cors())
-
 // db connection
 connectDB();
 
