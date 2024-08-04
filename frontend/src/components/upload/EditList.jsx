@@ -18,6 +18,7 @@ const EditList = () => {
   const {currentProjectContentId, currentProjectId, url, token} = useContext(ListContext)
 
   const [description, setDescription] = useState("");
+  const [projectContentName, setProjectContentName] = useState("");
   const [isEditMode, setIsEditMode] = useState(false);
 
   const fetchProjectContent = async () => {
@@ -31,6 +32,7 @@ const EditList = () => {
     if (response.data.success) {
       console.log("ProjectContent fetch successful:", response.data);
       setDescription(response.data.projectContent.description);
+      setProjectContentName(response.data.projectContent.name);
     } else {
       console.error("ProjectContent fetch failed:", response.data.message);
     }
@@ -81,8 +83,9 @@ const EditList = () => {
         <div>
           <div className='navigationStrip'>
             <div className='navigationStripLeft'>
-              <img src={home_blue} alt='' />
-              <p>/ Sample Project / <span>Transcript</span></p>
+              <img src={home_blue} onClick={()=>navigate("/")} alt='' />
+              {/* <p>/ Sample Project / <span>Description</span></p> */}
+              <p>{`/ ${projectContentName}`} / <span>Description</span></p>
             </div>
             <div className='navigationStripRight'>
               <img src={arrow_drop_down} alt='' />
@@ -92,7 +95,7 @@ const EditList = () => {
             </div>
           </div>
           <div className="header">
-            <h1>Edit Transcript</h1>
+            <h1>Edit Description</h1>
             {
             isEditMode && (
               <div>
