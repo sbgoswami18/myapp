@@ -25,6 +25,13 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
 
+app.use(
+    cors({
+        origin: "*",
+        credentials: true,
+    })
+);
+
 const PORT = process.env.PORT || 4000;
 
 // middleware
